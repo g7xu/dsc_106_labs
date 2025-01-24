@@ -36,7 +36,11 @@ for (let p of pages) {
 
 
   // checking for home page  
-  url = !ARE_WE_HOME && !url.startsWith('http') ? '../' + url : url;
+  if (!ARE_WE_HOME && !url.startsWith('http')) {
+    if (location.pathname !== '/resume.html') {
+      url = '../' + url;
+    }
+  }
 
   let link = document.createElement('a');
   link.href = url;

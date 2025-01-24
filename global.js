@@ -1,29 +1,12 @@
 console.log('IT’S ALIVE!');
 
-// function $$(selector, context = document) {
-//   return Array.from(context.querySelectorAll(selector));
-// }
-
-// const navLinks = Array.from(document.querySelectorAll("nav a"));
-
-// let currentLink = navLinks.find(
-//   (a) => a.host === location.host && a.pathname === location.pathname
-// );
-
-// if (currentLink) {
-//   currentLink.classList.add("current");
-// }
-
-// console.log(navLinks)
-
-// console.log(currentLink)
 const ARE_WE_HOME = document.documentElement.classList.contains('home');
 
 let pages = [
   { url: '', title: 'Home' },
   { url: 'projects/', title: 'Projects' },
   { url: 'contact/', title: 'Contacts' },
-  { url: 'resume.html', title: 'Resume' },
+  { url: 'resume/', title: 'Resume' },
   {url: 'https://g7xu.github.io/', title: 'actual_web'}
 ];
 
@@ -37,9 +20,7 @@ for (let p of pages) {
 
   // checking for home page  
   if (!ARE_WE_HOME && !url.startsWith('http')) {
-    if (location.pathname !== '/dsc_106_labs/resume.html') {
       url = '../' + url;
-    }
   }
 
   let link = document.createElement('a');

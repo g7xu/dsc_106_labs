@@ -37,7 +37,7 @@ for (let p of pages) {
 
   // checking for home page  
   if (!ARE_WE_HOME && !url.startsWith('http')) {
-    if (location.pathname !== '/resume.html') {
+    if (location.pathname !== '/dsc_106_labs/resume.html') {
       url = '../' + url;
     }
   }

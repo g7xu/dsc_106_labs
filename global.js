@@ -122,3 +122,9 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
 export function countProjects(projects, headingElement) {
   headingElement.textContent = `Total Projects: ${projects.length}`;
 }
+
+//  function that will fetch the github data
+export async function fetchGitHubData(username) {
+  // return statement here
+  return fetchJSON(`https://api.github.com/users/${username}`);
+}

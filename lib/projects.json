@@ -1,62 +1,74 @@
 [
     {
-        "title": "Lorem ipsum dolor sit.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, sint. Placeat a, maiores perferendis, dicta voluptas veritatis mollitia, optio ducimus voluptatum velit vero similique quasi et aperiam expedita provident! Rem."
+        "title": "DSTL Lab: Investigration on Effective Data Analytical Strategies",
+        "image": "../images/dstl_flowchart.png",
+        "description": "In this paper, we conducted a user speak-aloud study to explore effective practices that novice data scientists can do to understand data science workbooks. In the paper, we propose three key methodologies: understanding the data schema, guess-and-check, and goal-oriented exploration.",
+        "year": 2023
     },
     {
-        "title": "Facere earum assumenda ut.",
+        "title": "Scripps Lab: an investigation on data imputation strategies",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Dicta, quis omnis, est et aspernatur quam optio eaque consequatur maxime harum rerum dolore, tempora necessitatibus tempore voluptate. Delectus incidunt officiis, ullam nemo quasi dicta perspiciatis qui laboriosam labore ipsum?"
+        "description": "Dicta, quis omnis, est et aspernatur quam optio eaque consequatur maxime harum rerum dolore, tempora necessitatibus tempore voluptate. Delectus incidunt officiis, ullam nemo quasi dicta perspiciatis qui laboriosam labore ipsum?",
+        "year": 2023
     },
     {
-        "title": "Quidem ipsum consequatur eaque?",
+        "title": "Covid Walk: an VR project",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Repellat laudantium explicabo reprehenderit omnis sequi, tempora facere, iure, adipisci beatae inventore voluptatibus velit fuga nemo! Eaque, illo? Dolorum suscipit nemo soluta accusamus vel sed non officia temporibus ipsam asperiores?"
+        "description": "Repellat laudantium explicabo reprehenderit omnis sequi, tempora facere, iure, adipisci beatae inventore voluptatibus velit fuga nemo! Eaque, illo? Dolorum suscipit nemo soluta accusamus vel sed non officia temporibus ipsam asperiores?",
+        "year": 2020
     },
     {
-        "title": "Culpa facere eveniet expedita.",
+        "title": "Flight Analysis",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Minima cumque magni voluptate magnam culpa voluptatibus vero quae laboriosam architecto, fuga nulla exercitationem sunt commodi! Recusandae voluptate aliquid quidem odit, expedita sequi consectetur rerum. Saepe harum eum incidunt praesentium."
+        "description": "Minima cumque magni voluptate magnam culpa voluptatibus vero quae laboriosam architecto, fuga nulla exercitationem sunt commodi! Recusandae voluptate aliquid quidem odit, expedita sequi consectetur rerum. Saepe harum eum incidunt praesentium.",
+        "year": 2023
     },
     {
-        "title": "Eum ipsam officia non!",
+        "title": "Recommendation System",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Dicta, est sequi! Sed error, fuga repellendus quos neque quaerat provident odio, delectus sequi veniam est doloribus facere, ad aspernatur ex at ducimus non alias exercitationem. Sit, voluptatibus. Asperiores, hic!"
+        "description": "Dicta, est sequi! Sed error, fuga repellendus quos neque quaerat provident odio, delectus sequi veniam est doloribus facere, ad aspernatur ex at ducimus non alias exercitationem. Sit, voluptatibus. Asperiores, hic!",
+        "year": 2023
     },
     {
-        "title": "Accusamus vitae voluptatum sunt?",
+        "title": "Data integration",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Sed voluptate repellat possimus eum cum! Velit pariatur minima soluta, rerum ea odit quaerat sit? Optio, repellat? Quos optio id dicta deleniti voluptatibus excepturi mollitia eius minus culpa itaque! Suscipit."
+        "description": "Sed voluptate repellat possimus eum cum! Velit pariatur minima soluta, rerum ea odit quaerat sit? Optio, repellat? Quos optio id dicta deleniti voluptatibus excepturi mollitia eius minus culpa itaque! Suscipit.",
+        "year": 2023
     },
     {
         "title": "Unde doloribus culpa nesciunt.",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Dolore laboriosam neque fugiat ratione quis tempore, quasi veniam voluptatum vero ab minus id ut et odio quam natus excepturi suscipit voluptatem. Deserunt qui minus culpa, adipisci inventore accusamus obcaecati."
+        "description": "Dolore laboriosam neque fugiat ratione quis tempore, quasi veniam voluptatum vero ab minus id ut et odio quam natus excepturi suscipit voluptatem. Deserunt qui minus culpa, adipisci inventore accusamus obcaecati.",
+        "year": 2023
     },
     {
         "title": "Laboriosam ea facere in?",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Accusantium debitis beatae nihil, inventore sapiente consequatur optio eligendi non nulla nostrum quisquam fuga in eaque minima possimus! Nisi corrupti maiores iste odio amet eos hic delectus quasi, quaerat nam."
+        "description": "Accusantium debitis beatae nihil, inventore sapiente consequatur optio eligendi non nulla nostrum quisquam fuga in eaque minima possimus! Nisi corrupti maiores iste odio amet eos hic delectus quasi, quaerat nam.",
+        "year": 2023
     },
     {
         "title": "Consectetur voluptatibus quia veritatis.",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Inventore aspernatur recusandae exercitationem rerum quisquam illum ullam eum accusantium. Aspernatur, nesciunt, porro laboriosam consectetur debitis quod omnis, hic quas dolorum ullam ut culpa a iusto tempora praesentium provident facilis?"
+        "description": "Inventore aspernatur recusandae exercitationem rerum quisquam illum ullam eum accusantium. Aspernatur, nesciunt, porro laboriosam consectetur debitis quod omnis, hic quas dolorum ullam ut culpa a iusto tempora praesentium provident facilis?",
+        "year": 2023
     },
     {
         "title": "Pariatur, aut! Ad, veritatis?",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Rerum voluptates sequi placeat excepturi temporibus delectus ipsa ipsum veritatis vitae mollitia similique nisi, quam incidunt id esse tempore doloribus. Praesentium nemo quo inventore non voluptatum totam libero voluptates alias."
+        "description": "Rerum voluptates sequi placeat excepturi temporibus delectus ipsa ipsum veritatis vitae mollitia similique nisi, quam incidunt id esse tempore doloribus. Praesentium nemo quo inventore non voluptatum totam libero voluptates alias.",
+        "year": 2023
     },
     {
         "title": "Et non cupiditate ab.",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Dolorum aperiam facilis laudantium minus impedit magnam modi accusantium excepturi voluptas? Tempora omnis aliquam temporibus itaque, esse sequi odio. Inventore repellat pariatur provident incidunt natus at cum mollitia saepe magnam."
+        "description": "Dolorum aperiam facilis laudantium minus impedit magnam modi accusantium excepturi voluptas? Tempora omnis aliquam temporibus itaque, esse sequi odio. Inventore repellat pariatur provident incidunt natus at cum mollitia saepe magnam.",
+        "year": 2023
     },
     {
         "title": "Placeat quam officia ad!",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Sequi esse deserunt, excepturi fugit odit atque. Eaque recusandae veniam ea eos saepe veritatis iste quibusdam! Aspernatur sint ipsa facere doloribus aliquam. Reiciendis tempore laborum unde mollitia ad eius debitis."
+        "description": "Sequi esse deserunt, excepturi fugit odit atque. Eaque recusandae veniam ea eos saepe veritatis iste quibusdam! Aspernatur sint ipsa facere doloribus aliquam. Reiciendis tempore laborum unde mollitia ad eius debitis.",
+        "year": 2023
     }
 ]

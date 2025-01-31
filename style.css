@@ -87,6 +87,12 @@ form {
   h2 {
     margin: 0;
   }
+
+  /* reduce the size of the project image */
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 #education {

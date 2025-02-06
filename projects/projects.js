@@ -18,15 +18,15 @@ let arc = arcGenerator({
     endAngle: 2 * Math.PI,
   });
 
-
-let data = [
-{ value: 1, label: 'apples' },
-{ value: 2, label: 'oranges' },
-{ value: 3, label: 'mangos' },
-{ value: 4, label: 'pears' },
-{ value: 5, label: 'limes' },
-{ value: 5, label: 'cherries' },
-];
+// calculating project years and adding it to the page
+let rolledData = d3.rollups(
+    projects,
+    (v) => v.length,
+    (d) => d.year,
+)
+let data = rolledData.map(([year, count]) => {
+    return { value: count, label: year };
+  });
 let colors = d3.scaleOrdinal(d3.schemeTableau10);
 
 let sliceGenerator = d3.pie().value((d) => d.value);
@@ -47,3 +47,23 @@ data.forEach((d, idx) => {
           .attr('style', `--color:${colors(idx)}`) // set the style attribute while passing in parameters
           .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`); // set the inner html of <li>
 })
+
+// adding a search field in the website
+let query = '';
+let searchInput = document.querySelector('.searchBar');
+
+if (searchInput) {
+  searchInput.addEventListener('change', (event) => {
+      // update query value
+      query = event.target.value;
+      // TODO: filter the projects
+      let filteredProjects = projects.filter((project) => {
+        let values = Object.values(project).join('\n').toLowerCase();
+        return values.includes(query.toLowerCase());
+      });
+
+      // TODO: render updated projects!
+      renderProjects(filteredProjects, projectsContainer, 'h2');
+    
+    });
+}

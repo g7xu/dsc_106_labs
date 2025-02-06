@@ -207,10 +207,23 @@ ul.legend {
     align-items: center;
     gap: 0.3em;
   }
-}
+
+}  
 
 #project-pie-plot-container {
   display: flex;
   align-items: center;
   gap: 1em;
+}
+
+.searchBar {
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1em;
+  gap: 0.5em;
+  margin: auto;
+  margin-bottom: 1em; /* Add space below the search bar */
 }

@@ -101,7 +101,7 @@ export async function fetchJSON(url) {
 // call the fetchJSON function
 fetchJSON('../lib/projects.json')
 
-// creating funciton that will dynamically create the projects page
+// creating function that will dynamically create the projects page
 export function renderProjects(projects, containerElement, headingLevel = 'h2') {
   // Create the project and article element
   containerElement.innerHTML = '';
@@ -110,9 +110,12 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
   for (const project of projects) {
     const article = document.createElement('article');
     article.innerHTML = `
-      <h3>${project.title}</h3>
+      <${headingLevel}>${project.title}</${headingLevel}>
       <img src="${project.image}" alt="${project.title}">
-      <p>${project.description}</p>
+      <div>
+        <p>${project.description}</p>
+        <p><strong>Year:</strong> ${project.year}</p>
+      </div>
     `;
     containerElement.appendChild(article);
   }
@@ -128,3 +131,4 @@ export async function fetchGitHubData(username) {
   // return statement here
   return fetchJSON(`https://api.github.com/users/${username}`);
 }
+ 

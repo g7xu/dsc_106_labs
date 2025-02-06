@@ -176,3 +176,41 @@ label.color-scheme {
   right: 1rem;
   font-size: 80%;
 }
+
+/* style for the pie chart in paroject page */
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+
+  overflow: visible;
+}
+
+/* cutomize the swatch class */
+.swatch {
+  width: 0.8em;
+  aspect-ratio: 1 / 1;
+  background-color: var(--color);
+  border-radius: 50%;
+  display: inline-block;
+}
+ul.legend {
+  display: grid;
+  flex: 1;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  padding: 0.5em;
+  margin: 0.5em;
+  gap: 0.3em;
+  border: 1px solid #ccc; /* Add border to the legend */
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+  }
+}
+
+#project-pie-plot-container {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}

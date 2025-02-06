@@ -80,23 +80,24 @@ function renderPlot(filteredProjects) {
                 idx === selectedIndex ? 'selected' : ''
             ));
 
-            // filter out information by years
-            if (selectedIndex === -1) {
-                renderProjects(filteredProjects, projectsContainer, 'h2');
-            } else {
-                // filter projects and project them onto webpage
+            // Filter out information by years and search query
+            let filteredProjectsByYear = filteredProjects;
+            if (selectedIndex !== -1) {
                 let selectedYear = data[selectedIndex].label;
-                let filteredProjectsByYear = filteredProjects.filter((project) => {
+                filteredProjectsByYear = filteredProjects.filter((project) => {
                     return project.year === selectedYear;
                 });
-                renderProjects(filteredProjectsByYear, projectsContainer, 'h2');
             }
+
+            // Apply search query filter
+            let finalFilteredProjects = filteredProjectsByYear.filter((project) => {
+                let values = Object.values(project).join('\n').toLowerCase();
+                return values.includes(query.toLowerCase());
+            });
+
+            renderProjects(finalFilteredProjects, projectsContainer, 'h2');
         });
     });
-
-    
-
-
 }
 
 

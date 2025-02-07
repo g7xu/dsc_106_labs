@@ -15,6 +15,7 @@ countProjects(projects, projectsHeading);
 
 // adding a search field in the website
 let query = '';
+let year = '';
 let searchInput = document.querySelector('.searchBar');
 
 
@@ -66,7 +67,12 @@ function renderPlot(filteredProjects) {
         .attr('d', arc)
         .attr('fill', colors(i))
         .on('click', () => {
+            // if selectedIndex is already selected, deselect it
             selectedIndex = selectedIndex === i ? -1 : i;
+            
+            // if selectedIndex is already selected, set year to empty string
+            // otherwise, set year to the selected year
+            year = selectedIndex === -1 ? '' : data[selectedIndex].label;
             
             svg
             .selectAll('path')
@@ -108,20 +114,28 @@ if (searchInput) {
     projectsContainer.innerHTML = '';
     d3.select('.legend').selectAll('li').remove();
 
-
     // update query value
     query = event.target.value;
-    // TODO: filter the projects
+    // TODO: filter the projects based on the search query and year
     let filteredProjects = projects.filter((project) => {
-    let values = Object.values(project).join('\n').toLowerCase();
-    return values.includes(query.toLowerCase());
-    });
-
+        let values = Object.values(project).join('\n').toLowerCase();
+        return values.includes(query.toLowerCase());
+        });
+    
+    // filter the projects based on the year
+    if (year !== '') {
+        filteredProjects = filteredProjects.filter((project) => {
+            return project.year === year;
+        });
+    }
     // TODO: render updated projects!
     renderProjects(filteredProjects, projectsContainer, 'h2');
 
     // render the pie chart
     renderPlot(filteredProjects);
+
+    // reset the year
+    year = '';
 
     });
 }

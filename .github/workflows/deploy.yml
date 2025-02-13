@@ -16,3 +16,11 @@
     git add -f meta/loc.csv
     git commit -m "Update code statistics" || echo "No changes to commit"
     git push
+
+- name: Ensure GITHUB_TOKEN has write permissions
+  run: |
+    echo "Permissions granted"
+  permissions:
+    contents: write
+    pages: write
+    id-token: write

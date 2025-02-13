@@ -45,11 +45,44 @@ function processCommits() {
     });
 }
 
+function displayStats() {
+  // Process commits first
+  processCommits();
+
+  // Create the dl element
+  const dl = d3.select('#stats').append('dl').attr('class', 'stats');
+
+  // Add total LOC
+  const totalLocDiv = dl.append('div');
+  totalLocDiv.append('dt').html('Total <abbr title="Lines of code">LOC</abbr>');
+  totalLocDiv.append('dd').text(data.length);
+
+  // Add total commits
+  const totalCommitsDiv = dl.append('div');
+  totalCommitsDiv.append('dt').text('Total commits');
+  totalCommitsDiv.append('dd').text(commits.length);
+
+  // Average line length
+  const avgLineLengthDiv = dl.append('div');
+  avgLineLengthDiv.append('dt').text('Average line length');
+  avgLineLengthDiv.append('dd').text(d3.mean(data, (d) => d.length).toFixed(2));
+
+  // Average line depth
+  const avgLineDepthDiv = dl.append('div');
+  avgLineDepthDiv.append('dt').text('Average line depth');
+  avgLineDepthDiv.append('dd').text(d3.mean(data, (d) => d.depth).toFixed(2));
+
+  // Average LOC per commit
+  const avgLocPerCommitDiv = dl.append('div');
+  avgLocPerCommitDiv.append('dt').text('Average LOC per commit');
+  avgLocPerCommitDiv.append('dd').text(d3.mean(commits, (d) => d.totalLines).toFixed(2));
+}
+
+
 document.addEventListener('DOMContentLoaded', async () => {
   await loadData();
 
-  processCommits();
-  console.log(commits);
+  displayStats();
 });
 
 

@@ -86,7 +86,7 @@ function renderPlot(filteredProjects) {
                 idx === selectedIndex ? 'selected' : ''
             ));
 
-            // Filter out information by years and search query
+            // Filter out information by years
             let filteredProjectsByYear = filteredProjects;
             if (selectedIndex !== -1) {
                 let selectedYear = data[selectedIndex].label;

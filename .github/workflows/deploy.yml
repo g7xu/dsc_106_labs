@@ -1,26 +1,36 @@
-- name: Checkout
-  uses: actions/checkout@v4
-  with:
-    fetch-depth: '0'
+name: Deploy Site
 
-- name: Run Elocuent
-  run: |
-    npx elocuent -d . -o meta/loc.csv
+on:
+  push:
+    branches:
+      - main  # Change this to the branch you want to trigger deployment on
 
-- name: Commit and Push
-  run: |
-    git config --local user.email "action@github.com"
-    git config --local user.name "GitHub Action"
-    mkdir -p meta
-    git pull
-    git add -f meta/loc.csv
-    git commit -m "Update code statistics" || echo "No changes to commit"
-    git push
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
-- name: Ensure GITHUB_TOKEN has write permissions
-  run: |
-    echo "Permissions granted"
-  permissions:
-    contents: write
-    pages: write
-    id-token: write
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Ensures full Git history is available
+
+      - name: Install Dependencies
+        run: |
+          npm install -g elocuent
+
+      - name: Run Elocuent to Generate CSV
+        run: |
+          npx elocuent -d . -o meta/loc.csv
+
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          mkdir -p meta
+          git pull
+          git add -f meta/loc.csv
+          git commit -m "Update code statistics" || echo "No changes to commit"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

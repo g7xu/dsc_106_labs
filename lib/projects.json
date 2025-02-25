@@ -6,6 +6,12 @@
         "year": 2023
     },
     {
+        "title": "Geographical Data Visualization",
+        "image": "../images/geo_vis.png",
+        "description": "this is an interactive dynamic visualization on the traffic flow of in Boston",
+        "year": 2025
+    },
+    {
         "title": "Scripps Lab: an investigation on data imputation strategies",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Dicta, quis omnis, est et aspernatur quam optio eaque consequatur maxime harum rerum dolore, tempora necessitatibus tempore voluptate. Delectus incidunt officiis, ullam nemo quasi dicta perspiciatis qui laboriosam labore ipsum?",
